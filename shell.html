@@ -115,16 +115,22 @@
         // Fullscreen detection and handling
         function toggleFullscreen() {
             if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(err => {
-                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                document.documentElement.requestFullscreen().then(() => {
+                    if (navigator.keyboard && navigator.keyboard.lock) {
+                        navigator.keyboard.lock(['Escape']);
+                    }
+                }).catch(err => {
+                    console.log(`Error: ${err.message}`);
                 });
             } else {
                 if (document.exitFullscreen) {
+                    if (navigator.keyboard && navigator.keyboard.unlock) {
+                        navigator.keyboard.unlock();
+                    }
                     document.exitFullscreen();
                 }
             }
         }
-
         document.addEventListener('keydown', function (e) {
             if (e.key === 'F11') {
                 e.preventDefault();
