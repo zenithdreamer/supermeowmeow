@@ -12,6 +12,15 @@ A charming tea shop management game where you play as a tea master creating deli
 - Customizable game settings
 - Beautiful 2D graphics with animated characters
 
+## 🌐 Online Demo
+
+Try the game directly in your browser: [Play SuperMeowMeow](https://zenthaidev.github.io/SuperMeowMeow/)
+
+Note: The web version requires a modern browser with WebAssembly support. For the best experience, we recommend using the latest version of Chrome, Firefox, or Edge. Desktop only.
+
+## 📸 Screenshots
+
+
 ## 🫖 How to Make Drinks
 
 ### Available Ingredients
@@ -113,10 +122,6 @@ The game supports various configuration options:
 ## 🏗️ Code Structure
 
 This project currently maintains all game logic in `main.c`. While this approach isn't ideal for large-scale production games, it was chosen deliberately for rapid prototyping purposes.
-
-## 🤝 Contributing
-
-Feel free to contribute to the project by submitting issues or pull requests.
 
 ## 📄 License
 
