@@ -31,7 +31,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpikkjk15y.js
+// include: /tmp/tmpkf8mrgbb.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -50,8 +50,8 @@ if (ENVIRONMENT_IS_NODE) {
         // web worker
         PACKAGE_PATH = encodeURIComponent(location.pathname.substring(0, location.pathname.lastIndexOf('/')) + '/');
       }
-      var PACKAGE_NAME = 'cmTC_8652f.data';
-      var REMOTE_PACKAGE_BASE = 'cmTC_8652f.data';
+      var PACKAGE_NAME = 'cmTC_bf473.data';
+      var REMOTE_PACKAGE_BASE = 'cmTC_bf473.data';
       var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
 var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
@@ -198,10 +198,10 @@ Module['FS_createPath']("/assets", "spritesheets", true, true);
           var files = metadata['files'];
           for (var i = 0; i < files.length; ++i) {
             DataRequest.prototype.requests[files[i].filename].onload();
-          }          Module['removeRunDependency']('datafile_cmTC_8652f.data');
+          }          Module['removeRunDependency']('datafile_cmTC_bf473.data');
 
       };
-      Module['addRunDependency']('datafile_cmTC_8652f.data');
+      Module['addRunDependency']('datafile_cmTC_bf473.data');
 
       Module['preloadResults'] ??= {};
 
@@ -225,21 +225,21 @@ Module['FS_createPath']("/assets", "spritesheets", true, true);
 
   })();
 
-// end include: /tmp/tmpikkjk15y.js
-// include: /tmp/tmpj06862t6.js
+// end include: /tmp/tmpkf8mrgbb.js
+// include: /tmp/tmppun94okt.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['$ww'] || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpj06862t6.js
-// include: /tmp/tmpff0lqgyc.js
+  // end include: /tmp/tmppun94okt.js
+// include: /tmp/tmpjn7iqcmn.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpff0lqgyc.js
+  // end include: /tmp/tmpjn7iqcmn.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -882,7 +882,7 @@ function createExportWrapper(name, nargs) {
 
 var wasmBinaryFile;
 function findWasmBinary() {
-    return locateFile('cmTC_8652f.wasm');
+    return locateFile('cmTC_bf473.wasm');
 }
 
 function getBinarySync(file) {
