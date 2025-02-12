@@ -2614,9 +2614,6 @@ void OptionsUpdate(Camera2D* camera)
 
 int RandomCustomerTexture()
 {
-    // Seed the random number generator with the current time
-    srand(time(NULL));
-
     int randomIndex = rand() % (sizeof(customersImageData) / sizeof(customersImageData[0]));
     return randomIndex;
 }
@@ -3451,8 +3448,11 @@ void SplashUpdate(Camera2D* camera)
     MainMenuUpdate(camera, true);
 }
 
-int main()
+int main(void)
 {
+    // Initialize random seed once at program start
+    srand(time(NULL));
+    
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     SetConfigFlags(FLAG_MSAA_4X_HINT);
 
