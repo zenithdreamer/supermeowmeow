@@ -126,6 +126,13 @@ The game supports various configuration options:
 
 This project currently maintains all game logic in `main.c`. While this approach isn't ideal for large-scale production games, it was chosen deliberately for rapid prototyping purposes.
 
+## Contributors
+
+[@kawinhill](https://github.com/kawinhill)
+[@mixiki](https://github.com/mixiki)
+[@m0owo](https://github.com/m0owo)
+[@Pixako-Unrealistia](https://github.com/Pixako-Unrealistia)
+
 ## 📄 License
 
 This project is licensed under GPL-3.0 license.
