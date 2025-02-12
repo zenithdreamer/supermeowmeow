@@ -4,5 +4,7 @@
 cmake-build-debug/
 bin/
 build/
+build-web/
 out/
 CMakeSettings.json
+tools/

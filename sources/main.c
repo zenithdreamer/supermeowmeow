@@ -8,6 +8,12 @@
 #include <time.h> 
 #include <string.h>
 
+// Web
+#define IS_WEB true
+
+// Constants
+#define NO_BUTTON -1  // Add this constant for button states
+
 // Render resolution
 #define BASE_SCREEN_WIDTH 1920
 #define BASE_SCREEN_HEIGHT 1080
@@ -1093,7 +1099,7 @@ void DrawMenuFallingItems(double deltaTime, bool behide)
             item->rotation = GetRandomDoubleValue(-360, 360);
             item->rotationSpeed = GetRandomValue(-3, 3);
             item->rotationSpeed *= 100;
-            if (abs(item->rotationSpeed) > item->fallingSpeed)
+            if (fabsf(item->rotationSpeed) > item->fallingSpeed)
                 item->rotationSpeed = item->fallingSpeed;
             if (item->rotationSpeed == 0)
                 item->rotationSpeed = 1 * 100;
@@ -1726,12 +1732,12 @@ bool validiator(Customer *customer, char *order)
 //create customer image at either position 1 2 or 3
 void render_customers(Customers *customers)
 {
-    if(&customers->customer1 != NULL)
+    if(customers != NULL)  // Check the customers pointer instead of address
+    {
         DrawCustomer(&customers->customer1);
-	if (&customers->customer2 != NULL)
-		DrawCustomer(&customers->customer2);
-	if (&customers->customer3 != NULL)
-		DrawCustomer(&customers->customer3);
+        DrawCustomer(&customers->customer2);
+        DrawCustomer(&customers->customer3);
+    }
 }
 
 //Yandere dev inspired programming.
@@ -1790,9 +1796,7 @@ void Tick(Customers *customers, float deltaTime) {
     UpdateCustomerState(&customers->customer3, deltaTime);
 }
 
-/* Definitions terminates*/
-
-
+void ResetGameState();
 void PlaySoundFx(SoundFxType type) {
     int randomIndex = 0;
 
@@ -1882,12 +1886,6 @@ void WindowUpdate(Camera2D* camera)
         SetRuntimeResolution(camera, BASE_SCREEN_WIDTH, BASE_SCREEN_HEIGHT);
         ToggleFullscreen();
     }
-
-    // ESC - Exit application
-    if (IsKeyPressed(KEY_ESCAPE))
-	{
-        ExitApplication();
-	}
 
     if(currentBgm != NULL)
         UpdateMusicStream(*currentBgm);
@@ -2111,22 +2109,6 @@ Color ColorAlphaOverride(Color color, float alpha)
 	return (Color) { color.r, color.g, color.b, (unsigned char)(alpha * 255) };
 }
 
-Color ColorLerp(Color a, Color b, float t) {
-    t = fmin(fmax(t, 0.0f), 1.0f);
-
-    // Ensure that the colors are vibrant by making sure the RGB values are closer to 255
-    a.r = (unsigned char)(a.r + (255 - a.r) * t);
-    a.g = (unsigned char)(a.g + (255 - a.g) * t);
-    a.b = (unsigned char)(a.b + (255 - a.b) * t);
-
-    Color result;
-    result.r = (unsigned char)(a.r + (b.r - a.r) * t);
-    result.g = (unsigned char)(a.g + (b.g - a.g) * t);
-    result.b = (unsigned char)(a.b + (b.b - a.b) * t);
-    result.a = (unsigned char)(a.a + (b.a - a.a) * t);
-    return result;
-}
-
 void DrawDayNightCycle(double deltaTime)
 {
     const Color dayNightColors[] = {
@@ -2177,6 +2159,7 @@ void DrawDayNightCycle(double deltaTime)
 
 void OptionsUpdate(Camera2D* camera)
 {
+    int currentHoveredButton = NO_BUTTON;
     Rectangle difficultyRect = { baseX + 780, baseY + 595, 340, 70 };
     Rectangle difficultyDecrementRect = { difficultyRect.x, difficultyRect.y, 60, 70 };
     Rectangle difficultyIncrementRect = { difficultyRect.x + 280, difficultyRect.y, 60, 70 };
@@ -2201,7 +2184,6 @@ void OptionsUpdate(Camera2D* camera)
     double lastFrameTime = GetTime();
 
     bool isHovering = false;
-    int currentHoveredButton = NULL;
 
     float alpha = 0.0f;
     double fadeInDuration = 0.35;
@@ -2510,7 +2492,7 @@ void OptionsUpdate(Camera2D* camera)
             }
             else
             {
-                currentHoveredButton = NULL;
+                currentHoveredButton = NO_BUTTON;  // Use NO_BUTTON instead of NULL
                 isHovering = false;
             }
         }
@@ -2765,6 +2747,14 @@ void GameUpdate(Camera2D *camera)
         // Calculate delta time
         double deltaTime = GetTime() - lastFrameTime;
         lastFrameTime = GetTime();
+
+         // Esc key to return to main menu
+        if (IsKeyPressed(KEY_ESCAPE))
+        {
+            ResetGameState();
+            MainMenuUpdate(camera, false);
+            return;
+        }
 
         WindowUpdate(camera);
 
@@ -3070,9 +3060,12 @@ void endgameUpdate(Camera2D *camera){
 
 void MainMenuUpdate(Camera2D* camera, bool playFade)
 {
+    int currentHoveredButton = NO_BUTTON;
     float fadeOutDuration = 1.0f;
     double currentTime = 0;
-    double lastFrameTime = GetTime();
+    double lastFrameTime = GetTime();  // Add lastFrameTime declaration
+    bool isHovering = false;
+    void (*transitionCallback)(Camera2D* camera) = NULL;
 
     int splashBackgroundImageWidth = splashBackgroundTexture.width;
     int splashBackgroundImageHeight = splashBackgroundTexture.height;
@@ -3117,7 +3110,7 @@ void MainMenuUpdate(Camera2D* camera, bool playFade)
 
             // Rotation speed is between -3 and 3, but should not execeed falling speed and should not be 0
             menuFallingItems[i].rotationSpeed = GetRandomValue(-3, 3);
-            if (abs(menuFallingItems[i].rotationSpeed) > menuFallingItems[i].fallingSpeed)
+            if (fabsf(menuFallingItems[i].rotationSpeed) > menuFallingItems[i].fallingSpeed)
                 menuFallingItems[i].rotationSpeed = menuFallingItems[i].fallingSpeed;
             if (menuFallingItems[i].rotationSpeed == 0)
                 menuFallingItems[i].rotationSpeed = 1;
@@ -3126,11 +3119,6 @@ void MainMenuUpdate(Camera2D* camera, bool playFade)
 
         }
     }
-
-    int currentHoveredButton = NULL;
-    void (*transitionCallback)(Camera2D * camera) = NULL;
-
-    bool isHovering = false;
 
     while (!WindowShouldClose())
     {
@@ -3206,7 +3194,7 @@ void MainMenuUpdate(Camera2D* camera, bool playFade)
         }
         else
         {
-            currentHoveredButton = NULL;
+            currentHoveredButton = NO_BUTTON;  // Use NO_BUTTON instead of NULL
             isHovering = false;
         }
 
@@ -3320,6 +3308,12 @@ void MainMenuUpdate(Camera2D* camera, bool playFade)
 
     UnloadTexture(backgroundTexture);
     CloseWindow();
+
+    // Execute transition if set
+    if (transitionCallback != NULL)
+    {
+        transitionCallback(camera);
+    }
 }
 
 void SplashUpdate(Camera2D* camera)
@@ -3475,11 +3469,16 @@ int main()
     camera.zoom = 1.0f;
 
     GameOptions _options;
-
     _options.difficulty = EASY;
+
+#ifdef IS_WEB
+    _options.resolution = (Resolution){ 1920, 1080 };  // Set to 1080p for web
+    _options.fullscreen = true;  // Set to fullscreen for web
+#else
     _options.resolution = (Resolution){ 1280, 720 };
-    _options.targetFps = 120;
     _options.fullscreen = false;  // Default to windowed mode
+#endif
+    _options.targetFps = 120;
     _options.showDebug = DEBUG_SHOW;
     _options.musicEnabled = true;
     _options.soundFxEnabled = true;
