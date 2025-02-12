@@ -1,8 +1,11 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10...3.31)
 
 # Set Emscripten as the compiler if building for web
 if(PLATFORM_WEB)
-    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/tools/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake")
+    # Let emcmake handle the toolchain file
+    if(NOT DEFINED CMAKE_TOOLCHAIN_FILE AND DEFINED ENV{EMSDK})
+        set(CMAKE_TOOLCHAIN_FILE "$ENV{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake")
+    endif()
 endif()
 
 project(my_raylib_game C)
