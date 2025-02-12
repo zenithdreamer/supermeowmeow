@@ -1,12 +1,12 @@
 # ninja log v5
 1	4	0	/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/cmake.verify_globs	fd655c2dbf23d02f
-5	673	1739333175174973092	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rshapes.c.o	d6cd1bdd9e337d61
-4	1404	1739333175906973373	CMakeFiles/my_raylib_game.dir/sources/main.c.o	f06147058b5e7b3e
-1404	1712	1739333176220973494	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/utils.c.o	31f36c50ce6bcc0c
-6	2870	1739333177378973939	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtext.c.o	f4ebb93bd49aa295
-5	3175	1739333177680974055	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rcore.c.o	f97d40a23ef2ed6a
-673	5219	1739333179725974841	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtextures.c.o	510a5682f69db3bc
-5	7405	1739333181910975681	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rmodels.c.o	56761d0a910a8e
-4	8497	1739333182998976099	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/raudio.c.o	61300535e7b725aa
-8497	8606	1739333183068976126	_deps/raylib-build/raylib/libraylib.a	a4f2b6739b72fba4
-8607	14768	1739333189258977976	my_raylib_game.html	bb798be56d0fbbbc
+5	727	1739334216188070389	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rshapes.c.o	d6cd1bdd9e337d61
+4	1181	1739334216637068997	CMakeFiles/my_raylib_game.dir/sources/main.c.o	f06147058b5e7b3e
+1182	1502	1739334216965067981	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/utils.c.o	31f36c50ce6bcc0c
+6	2948	1739334218404063520	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtext.c.o	f4ebb93bd49aa295
+4	2995	1739334218453063369	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rcore.c.o	f97d40a23ef2ed6a
+727	5917	1739334221373053372	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtextures.c.o	510a5682f69db3bc
+4	7447	1739334222906048038	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rmodels.c.o	56761d0a910a8e
+4	7962	1739334223416046263	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/raudio.c.o	61300535e7b725aa
+7962	8073	1739334223487046016	_deps/raylib-build/raylib/libraylib.a	a4f2b6739b72fba4
+8073	13995	1739334229440025928	my_raylib_game.html	bb798be56d0fbbbc
