@@ -8,7 +8,7 @@ if(PLATFORM_WEB)
     endif()
 endif()
 
-project(my_raylib_game C)
+project(index C)
 set(CMAKE_C_STANDARD 99)
 
 # Check if we're building for web platform
