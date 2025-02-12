@@ -20,6 +20,9 @@ Note: The web version requires a modern browser with WebAssembly support. For th
 
 ## 📸 Screenshots
 
+![image](https://github.com/user-attachments/assets/ccddea10-1436-47bd-a387-336ecac4b010)
+![image](https://github.com/user-attachments/assets/904617b7-b67d-4cab-8469-1b7ab59a2bcd)
+![image](https://github.com/user-attachments/assets/ede20707-8026-438c-a40b-a1e8fa087fac)
 
 ## 🫖 How to Make Drinks
 
