@@ -1,4 +1,4 @@
-/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/my_raylib_game.dir
+/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/index.dir
 /home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/package.dir
 /home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/package_source.dir
 /home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/edit_cache.dir

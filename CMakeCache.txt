@@ -182,7 +182,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=my_raylib_game
+CMAKE_PROJECT_NAME:STATIC=index
 
 //Path to a program.
 CMAKE_READELF:FILEPATH=/usr/bin/readelf
@@ -339,13 +339,13 @@ USE_EXTERNAL_GLFW:STRING=OFF
 WITH_PIC:BOOL=OFF
 
 //Value Computed by CMake
-my_raylib_game_BINARY_DIR:STATIC=/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web
+index_BINARY_DIR:STATIC=/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web
 
 //Value Computed by CMake
-my_raylib_game_IS_TOP_LEVEL:STATIC=ON
+index_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-my_raylib_game_SOURCE_DIR:STATIC=/home/runner/work/SuperMeowMeow/SuperMeowMeow
+index_SOURCE_DIR:STATIC=/home/runner/work/SuperMeowMeow/SuperMeowMeow
 
 //Value Computed by CMake
 raylib_BINARY_DIR:STATIC=/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/_deps/raylib-build/raylib

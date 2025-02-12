@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: my_raylib_game
+# Project: index
 # Configurations: Release
 # =============================================================================
 
@@ -41,42 +41,42 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/
 # =============================================================================
-# Object build statements for EXECUTABLE target my_raylib_game
+# Object build statements for EXECUTABLE target index
 
 
 #############################################
-# Order-only phony target for my_raylib_game
+# Order-only phony target for index
 
-build cmake_object_order_depends_target_my_raylib_game: phony || cmake_object_order_depends_target_raylib
+build cmake_object_order_depends_target_index: phony || cmake_object_order_depends_target_raylib
 
-build CMakeFiles/my_raylib_game.dir/sources/main.c.o: C_COMPILER__my_raylib_game_unscanned_Release /home/runner/work/SuperMeowMeow/SuperMeowMeow/sources/main.c || cmake_object_order_depends_target_my_raylib_game
+build CMakeFiles/index.dir/sources/main.c.o: C_COMPILER__index_unscanned_Release /home/runner/work/SuperMeowMeow/SuperMeowMeow/sources/main.c || cmake_object_order_depends_target_index
   DEFINES = -DASSETS_PATH=\"/assets/\" -DGRAPHICS_API_OPENGL_ES2 -DPLATFORM_WEB
-  DEP_FILE = CMakeFiles/my_raylib_game.dir/sources/main.c.o.d
+  DEP_FILE = CMakeFiles/index.dir/sources/main.c.o.d
   FLAGS = -s USE_GLFW=3 -s ASSERTIONS=1 -s WASM=1 -s ASYNCIFY -s INITIAL_MEMORY=64MB -s ALLOW_MEMORY_GROWTH=1 -O3 -DNDEBUG -std=gnu99
   INCLUDES = -I/home/runner/work/SuperMeowMeow/SuperMeowMeow/sources -I/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/_deps/raylib-src/src
-  OBJECT_DIR = CMakeFiles/my_raylib_game.dir
-  OBJECT_FILE_DIR = CMakeFiles/my_raylib_game.dir/sources
-  TARGET_COMPILE_PDB = CMakeFiles/my_raylib_game.dir/
-  TARGET_PDB = my_raylib_game.pdb
+  OBJECT_DIR = CMakeFiles/index.dir
+  OBJECT_FILE_DIR = CMakeFiles/index.dir/sources
+  TARGET_COMPILE_PDB = CMakeFiles/index.dir/
+  TARGET_PDB = index.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target my_raylib_game
+# Link build statements for EXECUTABLE target index
 
 
 #############################################
-# Link the executable my_raylib_game.html
+# Link the executable index.html
 
-build my_raylib_game.html: C_EXECUTABLE_LINKER__my_raylib_game_Release CMakeFiles/my_raylib_game.dir/sources/main.c.o | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/libraylib.a
+build index.html: C_EXECUTABLE_LINKER__index_Release CMakeFiles/index.dir/sources/main.c.o | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/libraylib.a
   FLAGS = -s USE_GLFW=3 -s ASSERTIONS=1 -s WASM=1 -s ASYNCIFY -s INITIAL_MEMORY=64MB -s ALLOW_MEMORY_GROWTH=1 -O3 -DNDEBUG
   LINK_FLAGS = --preload-file "/home/runner/work/SuperMeowMeow/SuperMeowMeow/assets@/assets" --shell-file "/home/runner/work/SuperMeowMeow/SuperMeowMeow/shell.html"    -sUSE_GLFW=3
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a
-  OBJECT_DIR = CMakeFiles/my_raylib_game.dir
+  OBJECT_DIR = CMakeFiles/index.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/my_raylib_game.dir/
-  TARGET_FILE = my_raylib_game.html
-  TARGET_PDB = my_raylib_game.pdb
+  TARGET_COMPILE_PDB = CMakeFiles/index.dir/
+  TARGET_FILE = index.html
+  TARGET_PDB = index.pdb
 
 
 #############################################
@@ -470,9 +470,9 @@ build _deps/raylib-build/raylib/install/strip: phony _deps/raylib-build/raylib/C
 # =============================================================================
 # Target aliases.
 
-build libraylib.a: phony _deps/raylib-build/raylib/libraylib.a
+build index: phony index.html
 
-build my_raylib_game: phony my_raylib_game.html
+build libraylib.a: phony _deps/raylib-build/raylib/libraylib.a
 
 build raylib: phony _deps/raylib-build/raylib/libraylib.a
 
@@ -507,7 +507,7 @@ build _deps/raylib-build/raylib/codegen: phony
 #############################################
 # Folder: /home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web
 
-build all: phony my_raylib_game.html _deps/raylib-build/all
+build all: phony index.html _deps/raylib-build/all
 
 # =============================================================================
 

@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: my_raylib_game
+# Project: index
 # Configurations: Release
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__my_raylib_game_unscanned_Release
+rule C_COMPILER__index_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/home/runner/work/SuperMeowMeow/SuperMeowMeow/emsdk-cache/emsdk-main/upstream/emscripten/emcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__my_raylib_game_unscanned_Release
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__my_raylib_game_Release
+rule C_EXECUTABLE_LINKER__index_Release
   command = $PRE_LINK && /home/runner/work/SuperMeowMeow/SuperMeowMeow/emsdk-cache/emsdk-main/upstream/emscripten/emcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
