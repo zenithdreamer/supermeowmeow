@@ -132,7 +132,7 @@ This project currently maintains all game logic in `main.c`. While this approach
 [@mixiki](https://github.com/mixiki)
 [@m0owo](https://github.com/m0owo)
 [@Pixako-Unrealistia](https://github.com/Pixako-Unrealistia)
-[@ZenithDreamer](https://github.com/ZenithDreamer)
+[@zenithdreamer](https://github.com/zenithdreamer)
 
 ## 📄 License
 
