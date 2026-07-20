@@ -4,6 +4,6 @@ message(VERBOSE "Executing download step for raylib")
 
 block(SCOPE_FOR VARIABLES)
 
-include("/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/fc-tmp/raylib/raylib-gitclone.cmake")
+include("/home/runner/work/supermeowmeow/supermeowmeow/build-web/CMakeFiles/fc-tmp/raylib/raylib-gitclone.cmake")
 
 endblock()

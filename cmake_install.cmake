@@ -1,8 +1,8 @@
-# Install script for directory: /home/runner/work/SuperMeowMeow/SuperMeowMeow
+# Install script for directory: /home/runner/work/supermeowmeow/supermeowmeow
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/runner/work/_temp/9a411792-d18c-4a3a-baf1-2456cd5d249b/emsdk-main/upstream/emscripten/cache/sysroot")
+  set(CMAKE_INSTALL_PREFIX "/home/runner/work/_temp/f9c18bcd-d68a-4180-8f09-8d02b90b5e04/emsdk-main/upstream/emscripten/cache/sysroot")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/_deps/raylib-build/cmake_install.cmake")
+  include("/home/runner/work/supermeowmeow/supermeowmeow/build-web/_deps/raylib-build/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/install_local_manifest.txt"
+  file(WRITE "/home/runner/work/supermeowmeow/supermeowmeow/build-web/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -61,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/runner/work/supermeowmeow/supermeowmeow/build-web/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -3,11 +3,11 @@
 cmake_policy(SET CMP0009 NEW)
 
 # PROJECT_SOURCES at CMakeLists.txt:53 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/runner/work/SuperMeowMeow/SuperMeowMeow/sources/*.c")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/runner/work/supermeowmeow/supermeowmeow/sources/*.c")
 set(OLD_GLOB
-  "/home/runner/work/SuperMeowMeow/SuperMeowMeow/sources/main.c"
+  "/home/runner/work/supermeowmeow/supermeowmeow/sources/main.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/runner/work/SuperMeowMeow/SuperMeowMeow/build-web/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/runner/work/supermeowmeow/supermeowmeow/build-web/CMakeFiles/cmake.verify_globs")
 endif()
