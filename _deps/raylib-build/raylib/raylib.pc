@@ -1,4 +1,4 @@
-prefix=/home/runner/work/_temp/f9c18bcd-d68a-4180-8f09-8d02b90b5e04/emsdk-main/upstream/emscripten/cache/sysroot
+prefix=/home/runner/work/_temp/d88c33ce-36a0-4684-83bd-eaeb2c9b97a7/emsdk-main/upstream/emscripten/cache/sysroot
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
