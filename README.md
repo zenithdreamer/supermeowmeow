@@ -90,16 +90,19 @@ Note: The web version requires a modern browser with WebAssembly support. Recomm
 ### Desktop Build
 
 #### Windows (Visual Studio)
+
 ```batch
 build-vs.bat
 ```
 
 #### Windows (Web)
+
 ```batch
 build-web.bat
 ```
 
 #### Linux ARM
+
 ```bash
 ./build-armv7l.sh
 ```
@@ -125,6 +128,7 @@ Make sure Emscripten SDK is installed and properly configured in your environmen
 ## Configuration
 
 The game supports the following settings:
+
 - Screen resolution
 - Fullscreen toggle
 - Sound effects volume
@@ -144,6 +148,10 @@ The game supports the following settings:
 
 This project is licensed under the GPL-3.0 license.
 
+All art assets (sprites, tools, backgrounds, UI) are copyrighted to the [Contributors](#contributors), all rights reserved, except where noted below.
+
 ## Credits
 
 Built with [raylib](https://www.raylib.com/) — A simple and easy-to-use library for videogame programming.
+
+Background music "My Heart" by [Yojo Summer](https://open.spotify.com/artist/7qAponFaTtOs7WpO8Dijou) ([SoundCloud](https://soundcloud.com/yojo_summer), [YouTube](https://www.youtube.com/watch?v=42yX4Ww2e68)).
