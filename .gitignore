@@ -8,3 +8,4 @@ build-web/
 out/
 CMakeSettings.json
 tools/
+_deps/
